@@ -1,0 +1,72 @@
+/* 
+Este arquivo CSS está vinculado ao arquivo html denominado "formulario_exemplo_html_com_chamada_css.html"
+*/
+
+*{  /* O asterístico (*) seleciona todos os objetos no arquivo .html*/
+    margin: 0;
+    padding: 0;
+}
+
+#id_titulo{ /*id_titulo é o id do campo de título no documento .html*/
+    font-family: sans-serif;
+    color: #380861; /*roxo*/
+    margin-left: 7%;
+}
+
+#id_subtitulo{ /*id_subtitulo é o id do campo de sub-título no documento .html*/
+    font-family: sans-serif;
+    color: #380861; /*roxo*/
+    margin-left: 10%;
+}
+
+fieldset{
+    border: 0;
+}
+
+body{ /*altera todo o conteúdo da tag "body" do documento html*/
+    background-color: #f0f8ff;
+    font-family: sans-serif;
+    font-size: 1em; /*em é uma unidade de medida*/
+    color: #59429d;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+input, select, textarea, button{ /*enfatiza as bordas em todas as caixinhas de texto destes objetos utilizados no documento .html*/
+    border-radius: 5px;
+
+}
+
+.campos { /* .campos é uma classe dentro do documento .html*/
+    margin-bottom: 1em;
+}
+
+.campos label{/* seleciona a classe ".campos" que tenha a tag "label"*/
+    margin-bottom: 0.2em;
+    color: #59429d;
+    display: block;
+}
+
+/*
+fieldset.grupo_inf_pessoal .campos{
+    float: left;
+    margin-left: 1em;
+}
+*/
+
+.campos input[type="text"], .campos input[type="email"], .campos select, .campos textarea{
+    padding: 0.2em;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px rgb(0,0,0,2);
+    display: block;
+}
+
+.campos select option{
+    padding-right: 1em;
+}
+
+.campos input:focus, .campos select:focus, .campos textarea:focus{
+    background: #e0e0f8;
+}
+

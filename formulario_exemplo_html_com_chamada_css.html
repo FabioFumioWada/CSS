@@ -1,0 +1,114 @@
+<!--No começo de um arquivo .html, no VSCODE se vc digitar "html:5", ele montará uma estrutura básica para vc-->
+
+<!DOCTYPE html> <!--Tipo do documento, pode ser adicionado a versão-->
+<html lang="en"> <!--Linguagem do documento-->
+<head>
+    <!--As tags "meta" são metadados-->
+    <meta charset="UTF-8"> <!--UTF-8 é um padrão de fomratação em unicode, linguagem universal-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Configuração padrão para dispositivo móvel-->
+    
+    <!--Este é o link deste documento html para o arquivo CSS-->
+    <link rel="stylesheet" type="text/CSS" href="formulario_exemplo_css.css"> 
+
+    <title>Formulário HTML + CSS</title> <!--Este título é apresentado na "aba" do navegador-->
+</head>
+
+<body>
+    <!--A tag DIV divide o fórmulário-->
+    <div class="campos">
+        <h1 id="id_titulo">Formulário Exemplo (HTML+CSS)</h1><!--Título grande-->
+        <p id="id_subtitulo">Complete suas informações</p><!--Parágrafo-->
+    </div>   
+
+    <form>
+        <fieldset class="grupo_inf_pessoal"> <!--Agrupa Informações / Neste fildset estão os dados pessoais-->
+            <br>
+            <div class="campos">
+                <strong> <label for="nome">Nome</label> </strong>
+                <input type="text" name="nome" id="id_nome" required> <!--Required = Campo Obrigatório-->
+            </div>
+
+            <br>
+            <div class="campos">
+                <strong> <label for="sobrenome">Sobrenome</label> </strong>
+                <input type="text" name="sobrenome" id="id_sobrenome" required> <!--Required = Campo Obrigatório-->
+            </div>
+
+            <!--Combobox-->
+            <br>
+            <div class="campos">
+                <strong> <label for="genero_sexo">Genêro\Sexo?</label> </strong>
+                <select id = "id_questionario2" required>
+                    <option><selected disabled value="">Selecione</option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                    <option>Outros</option>
+                </select>
+            </div>
+
+            <!--Type: email-->
+            <br>
+            <div class="campos">
+                <strong> <label for="email">Email</label> </strong>
+                <input type="email" name="email" id = id_email required> <!--Required = Campo Obrigatório-->
+            </div>
+            <br>
+        </fieldset>
+
+        <br>
+        <fieldset class="grupo_inf_tecnico">
+            <!--Radio Button-->
+            <div class="campos">
+                <strong> <label>Você gostou deste front-end desenvolvido em html com css?</label> </strong>
+                <br>
+                <label>
+                    <input type="radio" name="questionario1" value="Sim">Sim
+                </label> 
+
+                <label>
+                    <input type="radio" name="questionario1" value="Nao" checked>Não
+                </label>
+
+                <label>
+                    <input type="radio" name="questionario1" value="Outros">Prefiro HTML com CSS
+                </label>
+            </div>
+
+            <!--Checkbox-->
+            <br>
+            <div class="campos">
+                <strong> <label>Selecione as tecnologias que você conhece:</label> </strong>
+                <br>
+                <input type="checkbox" name="questionario3A" id="id_questionario3A" value="HTML">
+                <label for="questionario3A">HTML</label>
+
+                <input type="checkbox" name="questionario3B" id="id_questionario3B" value="CSS">
+                <label for="questionario3B">CSS</label>
+
+                <input type="checkbox" name="questionario3C" id="id_questionario3C" value="Java">
+                <label for="questionario3C">Java</label>
+
+                <input type="checkbox" name="questionario4C" id="id_questionario4C" value="Javascript">
+                <label for="questionario3C">Javascript</label>
+            </div>
+        </fieldset>
+
+        <!--Memo-->
+        <div class="campos">
+            <br>
+            <strong> <label>Conte um pouco sobre a sua experiência com HTML:</label> </strong>
+            <br>
+            <textarea name="experiencia" id="id_experiencia" cols="1" rows="10" style="width:26em"></textarea>
+        </div>
+
+        <!--Botão-->
+        <br>
+        <br>
+        <br>
+        <center>
+            <button type="submit">Concluído</button>
+        </center>
+
+    </form>
+</body>
+</html> 
